@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "smoke:nicrron": "node --env-file=.env scripts/smoke-nicrron.mjs"
   },
   "dependencies": {
     "framer-motion": "^14.6.0",
