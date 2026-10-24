@@ -1,0 +1,14 @@
+---
+description: DueDilly project conventions
+alwaysApply: true
+---
+
+- Design spec lives in `docs/TDD.md`; follow it.
+- Stack: Next.js 14 App Router + TypeScript + Tailwind + Recharts + Framer Motion. No database, no auth.
+- Provider calls (Nicrron, akta.pro, PRISM, Roundtable) only in server code under `src/lib/` adapters; never in client components.
+- Secrets come from `process.env`; never hardcode keys.
+- Scores are computed in deterministic TypeScript (`src/lib/scoring.ts`), never by the LLM.
+- A dimension with no evidence is `null`, never 0 or an average.
+- Radar spokes always in fixed order: Team, Market, Product/Insight, Traction, Unit Economics, Defensibility, Deal Risk. Scale fixed 0-10.
+- Colors: bg #070B14, glass rgba(14,22,38,0.72), border #1E2A44, accent #3EE8FF, ok #4DFF9A, err #FF4D6A, tool #FFB547, mem #A77BFF.
+- Demo data is synthetic and lives in `src/data/`.
