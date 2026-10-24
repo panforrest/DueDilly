@@ -17,6 +17,12 @@ export default function Home() {
           <span className="text-claim"> claimed</span> versus what we could <span className="text-accent">verify</span>. Thin evidence gets
           &ldquo;Not enough data,&rdquo; not a made-up number.
         </p>
+        <Link
+          href="/analyze"
+          className="mt-6 inline-block rounded-lg bg-accent px-5 py-2.5 font-semibold text-ink transition hover:brightness-110"
+        >
+          Analyze a deal live →
+        </Link>
         <div className="mt-6 flex flex-wrap gap-2 font-mono text-[11px] text-muted">
           {["Nicrron LLMs", "akta.pro external data", "Roundtable agent workspace", "PRISM audited"].map((t) => (
             <span key={t} className="rounded-full border border-line px-3 py-1">

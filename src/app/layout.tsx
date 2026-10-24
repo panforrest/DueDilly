@@ -35,7 +35,14 @@ export default function RootLayout({
               </span>
               <span className="text-lg font-semibold tracking-tight">DueDilly</span>
             </Link>
-            <span className="font-mono text-xs text-muted">Unknown is not zero.</span>
+            <nav className="flex items-center gap-5 text-sm">
+              <Link href="/" className="text-muted hover:text-white">
+                Pipeline
+              </Link>
+              <Link href="/analyze" className="rounded-lg border border-accent/50 bg-accent/10 px-3 py-1.5 font-medium text-accent hover:bg-accent/20">
+                Analyze a deal
+              </Link>
+            </nav>
           </div>
         </header>
         <main className="mx-auto max-w-7xl px-6 py-8">{children}</main>

@@ -8,7 +8,7 @@ if (!NICRRON_API_KEY) {
   process.exit(1);
 }
 
-const client = new OpenAI({ baseURL: NICRRON_BASE_URL, apiKey: NICRRON_API_KEY });
+const client = new OpenAI({ baseURL: NICRRON_BASE_URL, apiKey: NICRRON_API_KEY, timeout: 30_000, maxRetries: 0 });
 
 for (const model of [NICRRON_MODEL_FAST, NICRRON_MODEL_REASONING]) {
   const started = Date.now();
